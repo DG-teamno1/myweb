@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="color" id="color-picker">
+    <label for="text-shadow">Chọn chữ có bóng:</label>
+    <input type="checkbox" id="text-shadow">
+    <div id="text" style="font-size: 200px;">Text</div>
+
+    <script>
+        $(document).ready(function() {
+            $("#color-picker").on("change", function() {
+                var color = $(this).val();
+                $("#text").css("color", color);
+            });
+
+            $("#text-shadow").on("change", function() {
+                if ($(this).is(":checked")) {
+                    $("#text").css("text-shadow", "2px 2px 2px #999");
+                } else {
+                    $("#text").css("text-shadow", "none");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

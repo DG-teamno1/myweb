@@ -1,0 +1,95 @@
+/* Code animation */
+@keyframes banner {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: purple;
+    }
+
+    from {
+        font-size: 10px;
+    }
+
+    to {
+        font-size: 30px;
+    }
+}
+@keyframes imgpretty{
+    from{
+        background-image: url(https://image-us.eva.vn/upload/3-2021/images/2021-09-10/image6-1631238960-626-width650height490.jpg);
+    }
+    to{
+        background-image: url(https://petmaster.vn/petroom/wp-content/uploads/2020/03/thanh-bieu-cam-cho-husky.jpg);
+    }
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+.title-1 {
+    text-align: center;
+    line-height: 40px;
+    animation-name: banner;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.box-1{
+    text-align: center;
+    color: yellow;
+    line-height: 150px;
+    font-size: 50px;
+    border:1px solid red ;
+    width: 150px;
+    height: 150px;
+    display: block;
+    display: inline-block;
+    background-size: cover;
+    animation-name: imgpretty;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.box-2{
+    text-align: center;
+    color: yellow;
+    line-height: 150px;
+    font-size: 50px;
+    border-radius: 0px 30px;
+    border-style: dashed;
+    border-color:blue ;
+    width: 150px;
+    height: 150px;
+    display: block;
+    display: inline-block;
+    background-color: aqua;
+}
+.box-3{
+    text-align: center;
+    color: yellow;
+    line-height: 150px;
+    font-size: 50px;
+    border-radius: 30px 0px;
+    border-style: dotted;
+    border-color:violet ;
+    width: 150px;
+    height: 150px;
+    display: block;
+    display: inline-block;
+    background-color: aqua;
+}
+.box-4{
+    text-align: center;
+    color: yellow;
+    line-height: 150px;
+    font-size: 50px;
+    border-style: solid;
+    border-color:yellowgreen ;
+    width: 150px;
+    height: 150px;
+    display: block;
+    display: inline-block;
+    background-color: rgb(9, 104, 83);
+    animation:rotate 3s infinite linear ;
+}

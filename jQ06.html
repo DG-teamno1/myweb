@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQ06</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myRectangle {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myRectangle"></div>
+    <button id="btnUp">Lên</button>
+    <button id="btnDown">Xuống</button>
+    <button id="btnLeft">Trái</button>
+    <button id="btnRight">Phải</button>
+    <script>
+        $(document).ready(function(){
+            $("#btnUp").click(function(){
+                $("#myRectangle").animate({top: "-=10px"});
+            });
+            $("#btnDown").click(function(){
+                $("#myRectangle").animate({top: "+=10px"});
+            });
+            $("#btnLeft").click(function(){
+                $("#myRectangle").animate({left: "-=10px"});
+            });
+            $("#btnRight").click(function(){
+                $("#myRectangle").animate({left: "+=10px"});
+            });
+        });
+    </script>
+</body>
+</html>

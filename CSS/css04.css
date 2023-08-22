@@ -1,0 +1,14 @@
+.name{
+    font-size: 24px;
+    margin-left: 40px;
+}
+.one{
+    background-color: gray;
+    color: white;
+}
+.same-1{
+    background-color: rgba(128, 128, 128, 0.445);
+}
+.same-2{
+    background-color: rgba(169, 169, 169, 0.425);
+}

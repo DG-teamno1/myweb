@@ -1,0 +1,67 @@
+.heading {
+    color: blue;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.menu {
+    width: 100%;
+
+    height: 60px;
+
+    background-color: rgb(8, 67, 87);
+
+    font-size: 18px;
+}
+
+.menu ul {
+    margin: 0;
+}
+
+.menu li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+.menu a {
+    color: #FFF;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    line-height: 60px;
+
+    margin-left: 40px;
+}
+.menu a:hover{
+    font-size: 28px;
+    color: yellow;
+}
+img
+{
+    background-image: url(Images\cafe.jpg);
+    float: right;
+    height: 200px;
+    width: 200px;
+
+}
+.coffee{
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
+.account{
+    width: 250px;
+    height: 50px;
+    font-size:20px ;
+    border-radius: 10px;
+    background-color: rgb(8, 67, 87);
+    color: #FFF;
+}
+.account:hover{
+    color: rgb(194, 23, 23);
+    background-color:rgb(245, 120, 178) ;
+}

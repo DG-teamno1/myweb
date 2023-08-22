@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .square {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            display: inline-block;
+        }
+        .highlight {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="squares">
+        <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+        <div class="square">4</div>
+        <div class="square">5</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#squares .square").hover(function() {
+                $(this).addClass("highlight");
+            }, function() {
+                $(this).removeClass("highlight");
+            });
+        });
+    </script>
+</body>
+</html>

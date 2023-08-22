@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQ02</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Tính số ngày giữa hai thời điểm</h1>
+    <label for="start-date">Thời điểm bắt đầu:</label>
+    <input type="date" id="start-date"><br><br>
+    <label for="end-date">Thời điểm kết thúc:</label>
+    <input type="date" id="end-date"><br><br>
+    <button id="calculate">Tính số ngày</button><br><br>
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#calculate').click(function() {
+                var startDate = new Date($('#start-date').val());
+                var endDate = new Date($('#end-date').val());
+                var timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                $('#result').text('Số ngày giữa hai thời điểm là: ' + diffDays);
+            });
+        });
+    </script>
+</body>
+</html>

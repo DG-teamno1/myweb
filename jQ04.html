@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQ04</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .color-box {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #red {
+            background-color: red;
+        }
+        #green {
+            background-color: green;
+        }
+        #blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chọn màu</h1>
+    <div class="color-box" id="red"></div>
+    <div class="color-box" id="green"></div>
+    <div class="color-box" id="blue"></div><br><br>
+    <p>Màu đang chọn: <span id="selected-color">Không có</span></p><br><br>
+    <div id="result-box" style="width: 200px; height: 200px; border: 1px solid black;"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('.color-box').click(function() {
+                var color = $(this).css('background-color');
+                $('#selected-color').text(color).css('color', color);
+                $('#result-box').css('background-color', color);
+            });
+        });
+    </script>
+</body>
+</html>

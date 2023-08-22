@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 {
+            margin: 50px 500px 100px 50px;
+            border: 1px solid blue;
+            height: 200px;
+            width:500px;
+        }
+        .content {
+            margin: 5px;
+        }
+        .buttons {
+            float: right;
+        }
+        .button {
+            margin-left: 3px;
+        }
+        #btn1 {
+            background-color: blue;
+            color: #fff;
+            width: 100px;
+            transition: .5s;
+            height:50px;
+        }
+        #btn1:hover{
+            transition: .5s;
+            background-color: #fff;
+            color: blue;
+            cursor: pointer;
+        }
+
+        #btn2 {
+            background-color: blue;
+            color: #fff;
+            width: 100px;
+            transition: .5s;
+            height:50px;
+        }
+        #btn2:hover{
+            transition: .5s;
+            background-color: #fff;
+            color: blue;
+            cursor: pointer;
+        }
+        #box-2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div id="box-1">
+            <p>This page says</p>
+        <p>Nhap thang</p>
+        <input type="number"><br><br>
+        <div class="buttons">
+            <button id="btn1">OK</button>
+            <button class="button btn">Cancel</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="container-1">
+        <div id="box-2">
+            <p>This page says</p>
+            <p>Nhap nam</p>
+        <input type="number"><br><br>
+        <div class="buttons">
+            <button id="btn2">OK</button>
+            <button class="button btn">Cancel</button>
+        </div>
+        </div>
+    </div>
+    <script>
+        var btn1 = document.getElementById("btn1");
+        // var btn2 = document.getElementById("btn2");
+        // var display1 = document.getElementById("box-1");
+        var display2 = document.getElementById("box-2");
+
+        btn1.addEventListener("click", function() {
+            if (display2.style.display=="none") {
+                display2.style.display=="block"; //hien thi
+            } else {
+                display.style.display=="none";
+            }
+        });
+    </script>
+</body>
+</html>

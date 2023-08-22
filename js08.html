@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js08.html</title>
+</head>
+<body>
+    <h1>Thống kê chuỗi</h1>
+    <label for="inputString">Nhập chuỗi:</label><br>
+    <input type="text" id="inputString" name="inputString"><br><br>
+    <button onclick="count()">Thống kê</button><br><br>
+    <p id="wordCount"></p>
+    <p id="charCount"></p>
+    <p id="charFrequency"></p>
+
+    <script>
+        function count() {
+            var inputString = document.getElementById("inputString").value;
+            var wordCount = inputString.split(" ").length;
+            var charCount = inputString.replace(/[^a-zA-Z0-9]/g, "").length;
+            var charFrequency = {};
+            for (var i = 0; i < inputString.length; i++) {
+                var char = inputString.charAt(i);
+                if (charFrequency[char]) {
+                    charFrequency[char]++;
+                } else {
+                    charFrequency[char] = 1;
+                }
+            }
+            document.getElementById("wordCount").innerHTML = "Số từ: " + wordCount;
+            document.getElementById("charCount").innerHTML = "Số ký tự (chữ và số): " + charCount;
+            document.getElementById("charFrequency").innerHTML = "Số lần xuất hiện mỗi ký tự: " + JSON.stringify(charFrequency);
+        }
+    </script>
+</body>
+</html>

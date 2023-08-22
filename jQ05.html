@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQ05</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="https://haycafe.vn/wp-content/uploads/2022/03/anh-nen-meo-cute.jpg" alt="Image 1">
+    <script>
+        $(document).ready(function(){
+            $("#myImage").hover(function(){
+                $(this).attr("src", "https://i.pinimg.com/custom_covers/222x/734790564142559148_1588646204.jpg");
+                $(this).css("width", "300px");
+            }, function(){
+                $(this).attr("src", "https://haycafe.vn/wp-content/uploads/2022/03/anh-nen-meo-cute.jpg");
+                $(this).css("width", "200px");
+            });
+        });
+    </script>
+</body>
+</html>

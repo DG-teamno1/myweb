@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQ03</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+    
+        th{
+            border: 1px solid rgb(34, 187, 54);
+        }
+        td{
+            border: 1px solid rgb(226, 94, 7);
+        }
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width:500px ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Đổi màu nền</h1>
+    <table id="my-table">
+        <tr>
+            <th>Tên vật tư</th>
+            <th>Đơn vị tính </th>
+            <th>Đơn giá</th>
+        </tr>
+        <tr>
+            <td>Cát</td>
+            <td>Khối</td>
+            <td>77,000</td>
+        </tr>
+        <tr>
+            <td>Đá</td>
+            <td>Khối</td>
+            <td>90,000</td>
+        </tr>
+        <tr>
+            <td>Xi măng Hà Tiên loại 1</td>
+            <td>Bao</td>
+            <td>120,000</td>
+        </tr>
+        <tr>
+            <td>Xi măng Hà Tiên loại 2</td>
+            <td>Bao</td>
+            <td>100,000</td>
+        </tr>
+
+    </table><br><br>
+    <button id="change-color">Đổi màu nền</button>
+    <button id="default-color">Màu nền mặc định</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#change-color').click(function () {
+                $('#my-table tr:odd').css('background-color', 'rgb(248, 42, 86)');
+            });
+            $('#default-color').click(function () {
+                $('#my-table tr:odd').css('background-color', '#fff');
+            });
+        });
+    </script>
+</body>
+
+</html>

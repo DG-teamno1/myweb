@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js10.html</title>
+</head>
+<body>
+    <p id="output"></p>
+    <label for="inputString">Nhập chuỗi:</label><br>
+    <input type="text" id="inputString" name="inputString"><br><br>
+    <label for="fontColor">Chọn màu chữ:</label><br>
+    <input type="color" id="fontColor" name="fontColor"><br><br>
+    <label for="backgroundColor">Chọn màu nền:</label><br>
+    <input type="color" id="backgroundColor" name="backgroundColor"><br><br>
+    <button onclick="update()">Thực hiện</button><br><br>
+    <p id="output"></p>
+
+    <script>
+        function update() {
+            var inputString = document.getElementById("inputString").value;
+            var fontColor = document.getElementById("fontColor").value;
+            var backgroundColor = document.getElementById("backgroundColor").value;
+            document.getElementById("output").innerHTML = inputString;
+            document.getElementById("output").style.color = fontColor;
+            document.getElementById("output").style.backgroundColor = backgroundColor;
+        }
+    </script>
+</body>
+</html>

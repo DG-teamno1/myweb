@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQ01</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Thêm môn học</h1>
+    <input type="text" id="course-name" placeholder="Tên môn học">
+    <button id="add-course">Thêm môn học</button>
+    <h2>Danh sách môn học</h2>
+    <ul id="course-list"></ul>
+
+    <script>
+        $(document).ready(function() {
+            $('#add-course').click(function() {
+                var courseName = $('#course-name').val();
+                if (courseName) {
+                    $('#course-list').append('<li>' + courseName + '</li>');
+                    $('#course-name').val('');
+                }
+            });
+            $('#course-name').keypress(function(e) {
+                if (e.which == 13) {
+                    $('#add-course').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

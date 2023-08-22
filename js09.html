@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js09.html</title>
+</head>
+<body>
+    <h1>Khởi tạo và sắp xếp mảng</h1>
+    <label for="numElements">Nhập số phần tử:</label><br>
+    <input type="number" id="numElements" name="numElements"><br><br>
+    <button onclick="generateArray()">Khởi tạo mảng</button>
+    <button onclick="sortedArrayup()">Sắp xếp mảng tăng</button>
+    <button onclick="sortedArraydown()">Sắp xếp mảng giảm</button><br><br>
+    <p id="randomArray"></p>
+    <p id="sortedArrayup"></p>
+    <p id="sortedArraydown"></p>
+
+    <script>
+        var randomArray = [];
+        function generateArray() {
+            var numElements = document.getElementById("numElements").value;
+            randomArray = [];
+            for (var i = 0; i < numElements; i++) {
+                randomArray.push(Math.floor(Math.random() * 50));
+            }
+            document.getElementById("randomArray").innerHTML = "Mảng ngẫu nhiên: " + randomArray;
+        }
+        function sortedArrayup(){
+            var sortedArray = randomArray.slice().sort(function(a, b) { return a - b });
+            document.getElementById("sortedArrayup").innerHTML = "Mảng sắp xếp tăng dần: " + sortedArray;
+        }
+        function sortedArraydown(){
+            var sortedArray = randomArray.slice().sort(function(a, b) { return b - a });
+            document.getElementById("sortedArraydown").innerHTML="Mảng sắp xếp giảm dần: " + sortedArray;
+        }
+    </script>
+</body>
+</html>
